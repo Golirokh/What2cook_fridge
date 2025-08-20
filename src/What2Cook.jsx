@@ -3,8 +3,8 @@ import HeaderHero from "./HeaderHero";
 import VegIcon from "./Images/vegetables.png";
 import MeatsIcon from "./Images/Meats.png";
 import GrainsIcon from "./Images/grains.png"
-import DairyIcon from "./Images/Dairy.png"
-import HerbsIcon from "./Images/herbs.png"
+import FishIcon from "./Images/Fish.png"
+import PlantProteinIcon from "./Images/PlantProtein.png"
 import PantryIcon from "./Images/Pantry.png"
 import { useRecipeJob } from './hooks/useRecipeJob';
 import ResultCard from './components/ResultCard';
@@ -53,32 +53,32 @@ const What2Cook = () => {
     vegetables: {
       name: 'Vegetables',
       icon: '🥕',
-      items: ['tomato', 'onion', 'garlic', 'carrot', 'bell pepper', 'spinach', 'broccoli', 'mushroom', 'potato', 'cucumber']
+      items: ['tomato', 'potato', 'carrot', 'bell pepper', 'broccoli', 'spinach', 'mushroom', 'cabbage', 'zucchini', 'eggplant']
     },
     meats: {
       name: 'Meats',
       icon: '🍗',
-      items: ['chicken breast', 'ground beef', 'lamb', 'shrimp', 'tuna', 'eggs', 'tofu', 'chickpeas', 'lentils', 'sausage']
+      items: ['chicken', 'beef', 'lamb', 'pork', 'sausage','turkey','veal']
     },
     grains: {
       name: 'Grains/Carbs',
       icon: '🍚',
       items: ['rice', 'pasta', 'noodles', 'quinoa', 'couscous', 'bulgur', 'tortilla', 'bread', 'oats', 'barley']
     },
-    dairy: {
-      name: 'Dairy',
-      icon: '🥛',
-      items: ['milk', 'yogurt', 'mozzarella', 'cheddar', 'feta', 'butter', 'cream', 'parmesan', 'paneer', 'labneh']
+    fish: {
+      name: 'Fish/Seafood',
+      icon: '🐟',
+      items: ['salmon', 'tuna', 'cod', 'sea bass', 'shrimp', 'crab', 'lobster', 'clams', 'squid']
     },
-    herbs: {
-      name: 'Herbs & Spices',
-      icon: '🌿',
-      items: ['salt', 'black pepper', 'cumin', 'turmeric', 'paprika', 'oregano', 'basil', 'parsley', 'cinnamon', 'chili flakes']
+    plant_proteins: {
+      name: 'Plant-based Proteins',
+      icon: '🥬',
+      items: ['lentils', 'chickpeas', 'kidney beans', 'black beans', 'pinto beans', 'soybeans', 'tofu']
     },
     pantry: {
       name: 'Pantry & Sauces',
       icon: '🫙',
-      items: ['olive oil', 'tomato paste', 'soy sauce', 'vinegar', 'lemon', 'tahini', 'ketchup', 'mustard', 'mayonnaise', 'honey']
+      items: ['olive oil', 'tomato paste', 'soy sauce', 'vinegar', 'flour', 'tahini', 'ketchup', 'mustard', 'mayonnaise', 'honey']
     }
   };
 
@@ -86,8 +86,8 @@ const What2Cook = () => {
     meats: MeatsIcon,
     vegetables: VegIcon,
     grains: GrainsIcon,
-    dairy: DairyIcon,
-    herbs: HerbsIcon,
+    fish: FishIcon,
+    plant_proteins: PlantProteinIcon,
     pantry: PantryIcon,
   };
 
@@ -226,7 +226,7 @@ const What2Cook = () => {
 
             <div className="mb-12">
               <h2 className="text-[20px] text-gray-700 mb-6 text-start font-cursive">What do you have? <span className="text-[15px] text-gray-700 mb-6 text-start font-cursive">
-                (Select up to 5)
+                (Select up to 10)
               </span></h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
