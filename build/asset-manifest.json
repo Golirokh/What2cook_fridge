@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.40311365.css",
-    "main.js": "/static/js/main.27e3cc0f.js",
-    "static/media/HeaderPhoto.png": "/static/media/HeaderPhoto.75cdcca955dcbf9b9d25.png",
-    "static/media/herbs.png": "/static/media/herbs.9bcaebf4fdb711bac5d6.png",
-    "static/media/Pantry.png": "/static/media/Pantry.55a1c976876c806e39ed.png",
-    "static/media/grains.png": "/static/media/grains.0b745bc4d108cc170d8e.png",
-    "static/media/vegetables.png": "/static/media/vegetables.f11ab3b92ea579bd850e.png",
-    "static/media/Dairy.png": "/static/media/Dairy.cf5d9ada6d785febc87d.png",
-    "static/media/Meats.png": "/static/media/Meats.f9634822056fa0955845.png",
+    "main.css": "/static/css/main.0ee21a58.css",
+    "main.js": "/static/js/main.ad5d6e2f.js",
     "index.html": "/index.html",
-    "main.40311365.css.map": "/static/css/main.40311365.css.map",
-    "main.27e3cc0f.js.map": "/static/js/main.27e3cc0f.js.map"
+    "main.0ee21a58.css.map": "/static/css/main.0ee21a58.css.map",
+    "main.ad5d6e2f.js.map": "/static/js/main.ad5d6e2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.40311365.css",
-    "static/js/main.27e3cc0f.js"
+    "static/css/main.0ee21a58.css",
+    "static/js/main.ad5d6e2f.js"
   ]
 }

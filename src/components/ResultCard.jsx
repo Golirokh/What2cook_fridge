@@ -141,65 +141,20 @@ export default function ResultCard({ loading, error, data, onShareAction }) {
       <div className="grid items-start gap-6 md:grid-cols-2">
         {/* Left: Image */}
         <div className="order-1 md:order-none">
-          <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200">
+          <div className="w-[400px] h-[600px] overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200">
             {imageUrl ? (
               <img
                 src={imageUrl}
                 alt={title}
-                className="h-full w-full object-cover"
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                className="w-[400px] h-[600px] object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             ) : (
-              <div className="h-full w-full bg-slate-100" />
+              <div className="w-[400px] h-[600px] bg-slate-100" />
             )}
           </div>
-        </div>
-
-        {/* Right: Title + Ingredients */}
-        <div>
-          <h2 className="font-display text-slate-900 text-2xl md:text-3xl leading-tight text-start">
-            {title}
-          </h2>
-
-          {ingredients.length > 0 && (
-            <div className="mt-5">
-              <h3 className="text-[20px] text-gray-700 mb-2 text-start font-cursive">
-                Ingredients
-              </h3>
-              <ul className="space-y-0">
-                {ingredients.map((ingredient, i) => (
-                  <li key={`${ingredient}-${i}`} className="flex items-start">
-                    <span className="mr-2 text-emerald-600">•</span>
-                    <span className="text-gray-700 capitalize">{ingredient}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-
-
-        {/* NEW: Steps under the image (full width) */}
-        {steps.length > 0 && (
-          <div className="md:col-span-2">
-            <h3 className="text-[20px] text-gray-700 mb-4 text-start font-cursive">
-              Instructions
-            </h3>
-            <ol className="space-y-3">
-              {steps.map((step, i) => (
-                <li key={`step-${i}`} className="flex gap-3">
-                  <span className="flex-none w-8 h-8 rounded-full bg-blue-100 text-blue-700 grid place-items-center text-sm font-semibold">
-                    {i + 1}
-                  </span>
-                  <span className="text-gray-700 leading-relaxed">{step}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        )}
-
-        {/* Actions moved: full-width row above steps, aligned left */}
-        <div className="md:col-span-2  flex flex-wrap items-center ">
           <button
             onClick={handleShareInstagram}
             disabled={igBusy}
@@ -228,9 +183,64 @@ export default function ResultCard({ loading, error, data, onShareAction }) {
               <img src={Emlogo} alt="" className="h-6 w-6" aria-hidden="true" />
             )}
           </button>
-
-
         </div>
+
+
+
+
+
+
+
+
+
+        {/* Right: Title + Ingredients */}
+        <div>
+          <h2 className="font-display text-slate-900 text-2xl md:text-3xl leading-tight text-start">
+            {title}
+          </h2>
+
+          {ingredients.length > 0 && (
+            <div className="mt-5">
+              <h3 className="text-[20px] text-gray-700 mb-2 text-start font-cursive">
+                Ingredients
+              </h3>
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-1">
+                {ingredients.map((ingredient, i) => (
+                  <li
+                    key={`${ingredient}-${i}`}
+                    className="flex items-start"
+                  >
+                    <span className="mr-2 text-emerald-600">•</span>
+                    <span className="text-gray-700 capitalize">{ingredient}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+
+
+          {/* NEW: Steps under the image (full width) */}
+          {steps.length > 0 && (
+            <div className="md:col-span-2 mt-10">
+              <h3 className="text-[20px] text-gray-700 mb-2 text-start font-cursive">
+                Instructions
+              </h3>
+              <ol className="space-y-3">
+                {steps.map((step, i) => (
+                  <li key={`step-${i}`} className="flex gap-3">
+                    <span className="flex-none w-8 h-8 rounded-full bg-blue-100 text-blue-700 grid place-items-center text-sm font-semibold">
+                      {i + 1}
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+        </div>
+
+
 
         {/* (optional) Cuisines chips can stay here or below steps */}
         {Array.isArray(data.cuisines) && data.cuisines.length > 0 && (

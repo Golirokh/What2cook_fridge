@@ -22,11 +22,11 @@ export default function HeaderHero({ imageSrc }) {
             </div>
 
             {/* Heading + subheading */}
-            <h1 className="mt-2 font-display text-slate-900 text-2xl md:text-4xl leading-tight">
-              Need a dinner idea?
-            </h1>
-            <p className="mt-2 text-[13px] md:text-[16px] leading-snug text-slate-600">
+         
+            <p className="text-[16px]  leading-snug text-slate-600">
+              
               Pick what’s in your fridge, we’ll cook up an easy recipe for you!
+              
             </p>
           </div>
 
